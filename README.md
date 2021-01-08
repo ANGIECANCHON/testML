@@ -21,4 +21,4 @@ and open index.html
 
 ## Host 
 
-[https://testml-301116.uc.r.appspot.com]
+[testml-301116.uc.r.appspot.com]
