@@ -1,5 +1,5 @@
 /**
- * @api {post} /topsecret top secret
+ * @api {post} testml-301116.uc.r.appspot.com/topsecret top secret
  * @apiGroup Operación Fuego de Quasar
  * @apiName Nivel dos
  *
@@ -41,7 +41,7 @@
 *}
  */
 /**
- * @api {post} /ml/levelOne nivel uno
+ * @api {post} testml-301116.uc.r.appspot.com/ml/levelOne nivel uno
  * @apiGroup Operación Fuego de Quasar
  * @apiName Nivel uno
  *

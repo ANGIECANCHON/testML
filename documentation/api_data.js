@@ -1,7 +1,7 @@
 define({ "api": [
   {
     "type": "post",
-    "url": "/topsecret",
+    "url": "testml-301116.uc.r.appspot.com/topsecret",
     "title": "top secret",
     "group": "Operación_Fuego_de_Quasar",
     "name": "Nivel_dos",
@@ -54,7 +54,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/ml/levelOne",
+    "url": "testml-301116.uc.r.appspot.com/ml/levelOne",
     "title": "nivel uno",
     "group": "Operación_Fuego_de_Quasar",
     "name": "Nivel_uno",
