@@ -4,7 +4,7 @@
   "description": "test Mercado Libre",
   "main": "index.js",
   "scripts": {
-    "execute": "cd js && node index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "apidoc": "./node_modules/.bin/apidoc -i ./js -o documentation/"
   },

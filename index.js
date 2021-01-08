@@ -1,6 +1,6 @@
 
-const levelOne = require('./scripts/LevelOne')
-const levelTwo = require('./scripts/LevelTwo')
+const levelOne = require('./js/scripts/LevelOne')
+const levelTwo = require('./js/scripts/LevelTwo')
 const express = require('express')
 const app = express();
 var port = 8080
