@@ -12,3 +12,8 @@ npm i
 ```bash
 npm run execute
 ```
+
+## To see the documentation
+
+go to folder ->  ./documentation
+and open index.html
