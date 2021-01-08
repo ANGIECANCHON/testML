@@ -1,0 +1,24 @@
+{
+  "name": "quasarfire",
+  "version": "1.0.0",
+  "description": "test Mercado Libre",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "apidoc": "./node_modules/.bin/apidoc -i ./js -o documentation/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ANGIECANCHON/testML.git"
+  },
+  "author": "angie canchon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ANGIECANCHON/testML/issues"
+  },
+  "homepage": "https://github.com/ANGIECANCHON/testML#readme",
+  "dependencies": {
+    "apidoc": "^0.26.0",
+    "express": "^4.17.1"
+  }
+}
