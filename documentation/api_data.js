@@ -24,7 +24,7 @@ define({ "api": [
           },
           {
             "group": "Parameter",
-            "type": "String",
+            "type": "Array",
             "optional": false,
             "field": "message",
             "description": "<p>contenido del mensaje de auxilio</p>"
@@ -48,8 +48,100 @@ define({ "api": [
         }
       ]
     },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "    HTTP/1.1 404 Not Found\n    {\n  \"error\": \"Missing data\"\n}",
+          "type": "json"
+        }
+      ]
+    },
     "version": "0.0.0",
-    "filename": "js/apidoc.js",
+    "filename": "apidoc/apidoc.js",
+    "groupTitle": "Operación_Fuego_de_Quasar"
+  },
+  {
+    "type": "post",
+    "url": "testml-301116.uc.r.appspot.com/topsecret_split/{satellite_name}",
+    "title": "guarda info satelites",
+    "group": "Operación_Fuego_de_Quasar",
+    "name": "Nivel_tres",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "long",
+            "optional": false,
+            "field": "distance",
+            "description": "<p>Distancia entre satelite {satellite_name} y la nave</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "message",
+            "description": "<p>mensaje de auxilio satelite {satellite_name}</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"distance\": 142.7,\n  \"message\": [\"este\", \"\", \"un\", \"\", \"\" ]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n   \"message\": \"data saved successfully\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "    HTTP/1.1 404 Not Found\n    {\n  \"error\": \"the data could not be saved\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "apidoc/apidoc.js",
+    "groupTitle": "Operación_Fuego_de_Quasar"
+  },
+  {
+    "type": "get",
+    "url": "testml-301116.uc.r.appspot.com/topsecret_split/",
+    "title": "nivel tres trae posicion",
+    "group": "Operación_Fuego_de_Quasar",
+    "name": "Nivel_tres",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n   {\n   \"Position\": {\n       \"x\": \"-571.38\",\n       \"y\": \"-129.96\"\n   },\n   \"message\": \"este es un mensaje secreto\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "    HTTP/1.1 404 Not Found\n    {\n  \"error\": \"Missing data\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "apidoc/apidoc.js",
     "groupTitle": "Operación_Fuego_de_Quasar"
   },
   {
@@ -122,8 +214,17 @@ define({ "api": [
         }
       ]
     },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "    HTTP/1.1 404 Not Found\n    {\n  \"error\": \"Missing data\"\n}",
+          "type": "json"
+        }
+      ]
+    },
     "version": "0.0.0",
-    "filename": "js/apidoc.js",
+    "filename": "apidoc/apidoc.js",
     "groupTitle": "Operación_Fuego_de_Quasar"
   }
 ] });

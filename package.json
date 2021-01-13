@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "apidoc": "./node_modules/.bin/apidoc -i ./js -o documentation/"
+    "apidoc": "./node_modules/.bin/apidoc -i ./apidoc -o documentation/"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/ANGIECANCHON/testML#readme",
   "dependencies": {
     "apidoc": "^0.26.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "fs": "0.0.1-security"
   }
 }

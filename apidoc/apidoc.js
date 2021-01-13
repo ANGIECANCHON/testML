@@ -5,7 +5,7 @@
  *
  * @apiParam {String} name nombre del satelite
  * @apiParam {int} distance distancia entre el satelite y la nave
- * @apiParam {String} message contenido del mensaje de auxilio
+ * @apiParam {Array} message contenido del mensaje de auxilio
  * 
  * @apiParamExample {json} Request-Example:
 *    {
@@ -38,6 +38,11 @@
  *        "y": "-129.96"
  *    },
  *    "message": "este es un mensaje secreto"
+*} 
+* @apiErrorExample {json} Error-Response:
+ *     HTTP/1.1 404 Not Found
+ *     {
+ *   "error": "Missing data"
 *}
  */
 /**
@@ -68,5 +73,55 @@
  *   "CoordenadaPx": "-571.38",
  *   "CoordenadaPy": "-129.96",
  *   "message": "este es un mensaje"
+*}
+ * @apiErrorExample {json} Error-Response:
+ *     HTTP/1.1 404 Not Found
+ *     {
+ *   "error": "Missing data"
+*}
+ */
+/**
+ * @api {post} testml-301116.uc.r.appspot.com/topsecret_split/{satellite_name} guarda info satelites
+ * @apiGroup Operación Fuego de Quasar
+ * @apiName Nivel tres
+ *
+ * @apiParam {long} distance Distancia entre satelite {satellite_name} y la nave
+ * @apiParam {Array} message mensaje de auxilio satelite {satellite_name} 
+ * 
+ * @apiParamExample {json} Request-Example:
+*{
+ *   "distance": 142.7,
+ *   "message": ["este", "", "un", "", "" ]
+*}
+ *
+ * @apiSuccessExample {json} Success-Response:
+ * HTTP/1.1 200 OK
+*{
+*    "message": "data saved successfully"
+*}
+ * @apiErrorExample {json} Error-Response:
+ *     HTTP/1.1 404 Not Found
+ *     {
+ *   "error": "the data could not be saved"
+*}
+ */
+/**
+ * @api {get} testml-301116.uc.r.appspot.com/topsecret_split/ nivel tres trae posicion
+ * @apiGroup Operación Fuego de Quasar
+ * @apiName Nivel tres
+ *
+ * @apiSuccessExample {json} Success-Response:
+ * HTTP/1.1 200 OK
+ *    {
+ *    "Position": {
+ *        "x": "-571.38",
+ *        "y": "-129.96"
+ *    },
+ *    "message": "este es un mensaje secreto"
+*}
+ * @apiErrorExample {json} Error-Response:
+ *     HTTP/1.1 404 Not Found
+ *     {
+ *   "error": "Missing data"
 *}
  */
