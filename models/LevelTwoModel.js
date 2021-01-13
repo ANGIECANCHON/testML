@@ -18,39 +18,44 @@ const levelTwo = ({ body }) => {
     let result
     let mss
 
-    const array = body.satellites
+    if (body) {
+        const array = body.satellites
 
-    array.map(obj => {
-        switch (obj.name) {
-            case "kenobi":
-                distanceAP = obj.distance
-                mssKenobi = obj.message
+        array.map(obj => {
+            switch (obj.name) {
+                case "kenobi":
+                    distanceAP = obj.distance
+                    mssKenobi = obj.message
 
-                break;
-            case "skywalker":
-                distanceBP = obj.distance
-                mssSky = obj.message
+                    break;
+                case "skywalker":
+                    distanceBP = obj.distance
+                    mssSky = obj.message
 
-                break;
-            case "sato":
-                distanceCP = obj.distance
-                mssSato = obj.message
+                    break;
+                case "sato":
+                    distanceCP = obj.distance
+                    mssSato = obj.message
 
-                break;
+                    break;
+            }
+        })
+
+        if (!mssSato || !mssKenobi || !mssSky || !distanceAP || !distanceBP || !distanceCP) {
+
+            return false
+        } else {
+            mss = message.messageProcess(mssKenobi, mssSky, mssSato)
+
+            result = coordinates.coordinates(Ax, Ay, Bx, By, Cx, Cy, distanceAP, distanceCP)
+            mss = mss.toString()
+            mss = mss.replaceAll(",", "\ ");
+
+            return { "Position": { "x": result.Px, "y": result.Py }, "message": mss }
         }
-    })
-
-    if(!mssSato || !mssKenobi || !mssSky || !distanceAP || !distanceBP || !distanceCP){
-
+    }
+    else {
         return false
-    } else {
-        mss = message.messageProcess(mssKenobi, mssSky, mssSato)
-
-        result = coordinates.coordinates(Ax, Ay, Bx, By, Cx, Cy, distanceAP, distanceCP)
-        mss = mss.toString()
-        mss = mss.replaceAll(",", "\ ");
-
-        return { "Position": { "x": result.Px, "y": result.Py }, "message": mss }
     }
 }
 
